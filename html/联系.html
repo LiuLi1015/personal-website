@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我吧</title>
+    <link rel="stylesheet" href="../css/联系.css">
+    <link rel="stylesheet" href="../css/导航栏.css">
+    <!-- 同时使用多个样式表，最下面的样式表优先，一个样式表会覆盖它前面的样式表中的样式。 -->
+</head>
+<body>
+    <!-- 页眉区 -->
+    <header>
+        <div id="nav">
+            <div class="inner">
+                  <!-- 导航栏 -->
+                  <nav>
+                    <ul>
+                        <li><a href="../index.html">我的主页</a></li>
+                        <li><a href="./简历.html">我的简历</a></li>
+                        <li><a href="./经历.html">我的经历</a></li>
+                        <li><a href="./生活.html">我的生活</a></li>
+                        <li><a href="./爱好.html">我的爱好</a></li>
+                        <li><a href="./联系.html">联系我吧</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- 主内容区——表单 -->
+    <h1>给我留言吧</h1>
+    <!-- form元素定义表单，所有表单元素都嵌套在这个元素中。
+        action属性：服务器脚本的url。method属性：post/get，本页面采用post。并设置不保留历史输入记录 -->
+        <!-- 表单通常采用表格布局 -->
+    <form action="" method="post" autocomplete="off">
+        <!-- 表单中的行采用表格行布局  -->
+        <div class="tableRow">
+            <!-- 每个表单元素的标签label放在左列，所有输入元素放在右列 -->
+            <!-- 使用label标签时，要设置其“for属性”为相应的id -->
+            <label for="name">你的姓名:</label>
+            <input type="text" name="name" value="" placeholder="Good Bai">
+            <!-- input元素，单行文本，初值为空，并设置提示信息 -->
+        </div>
+        <div class="tableRow">
+            <label for="age">你的年龄:</label>
+            <input type="number" name="age" value="" placeholder="20" min="1" max="100">
+            <!-- input元素，数字输入，初值为空，设置了提示信息，并设置了最小值1，最大值100 -->
+        </div>
+        <div class="tableRow">
+            <!-- 为单选框添加label标签时，一组中所有控件的name相同，每个控件的id不同。 -->
+            <label for="sex">你的性别:</label>
+            <input type="radio" id="man" name="sex" value="">男
+            <input type="radio" id="woman" name="sex" value="">女
+            <!-- input元素，单选按钮 -->
+        </div>
+        <div class="tableRow">
+            <label for="phone">你的联系方式:</label>
+            <input type="tel" name="phone" value="" placeholder="18115201314">
+            <!-- input元素，类型为tel，初值为空，设置了提示信息 -->
+        </div>
+        <div class="tableRow">
+            <label for="email">你的邮箱:</label>
+            <input type="email" name="email" value="" placeholder="3306411237@qq.com">
+            <!-- input元素，类型为email，初值为空，设置了提示信息 -->
+        </div>
+        <div class="tableRow">
+            <label for="address">你的地址:</label>
+            <input type="text" name="address" value="" placeholder="湖北省武汉市">
+            <!-- input元素，单行文本，初值为空，设置了提示信息 -->
+        </div>
+        <div class="tableRow">
+            <label for="comments">你想对我说的话:</label>
+            <textarea name="comments"></textarea>
+            <!-- input元素，多行文本 -->
+        </div>
+        <div class="tableRow">
+            <!-- 提交按钮左边的单元格为空 -->
+            <label></label>
+            <input type="submit" value="提交">
+            <!-- input元素，提交按钮，value属性表示按钮上显示的文本 -->
+        </div>
+    </form>
+    <!-- 页脚区，包含两个特殊符号 -->
+    <footer>
+        &#9992;  Liu LingHua's personal website  &#10084;
+    </footer>
+</body>
+</html>
