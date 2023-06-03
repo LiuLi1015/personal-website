@@ -1,0 +1,66 @@
+body{
+    /* 设置背景颜色 */
+    background-color: rgb(211, 218, 196);
+     /*页面的初始化：页面上下左右存在空隙，因为页面默认margin=8px，所以将默认的margin去掉即可，即设置body的margin=0px。*/
+    margin: 0px; 
+    /* 设置字体和大小，采用缩写的方式写 */
+    font: small sans-serif;  
+}
+/* 标签选择器 */
+header{
+    /* 设置header页面的高度 */
+    height: 70px;
+}
+/* 类选择器 */
+.video1{
+    /* 设置视频的大小 */
+    width: 350px;
+    height: 220px;
+    /* 调整视频的位置 */
+    margin-left: 300px;
+}
+.video2{
+    /* 设置视频的大小，和上面的统一 */
+    width: 350px;
+    height: 220px;
+    /* 调整视频的位置，并与上面的div保持20px的页边距 */
+    margin-top: 20px;
+    margin-left: 200px;
+}
+/* 合并规则，同时设置.content1 和 .content2相同部分的样式 */
+div.content1 , div.content2{
+    /* 设置字体，采用缩写的方式 */
+    font: 120% sans-serif;
+    /* 设置内容首行缩进 */
+    text-indent: 2em;
+    /* 设置内容区div的大小 */
+    width: 550px;
+}
+/* 再分别设置.content1 和 .content2不同的样式 */
+div.content1{
+    /* 采用浮动布局，使其浮动在页面右边 */
+    float: right;
+    /* 调整内容区div的位置 */
+    margin-top: 40px;
+    margin-right: 200px;
+}
+div.content2{
+    /* 采用浮动布局，使其浮动在页面左边 */
+    float: left;
+    /* 调整内容区div的位置 */
+    margin-top: 80px;
+    margin-left: 200px;
+}
+footer {
+    background-color:rgb(181, 162, 131);
+    /* 设置字体颜色 */
+    color:  #efe5d0;
+    /* 设置字体大小为相对body的字体大小的90%，并设置为斜体 */
+    font: 90% italic;
+    /* 调整文字内容的位置，并使其居中 */
+    padding:15px;
+    margin: 0px;
+    text-align:center;
+    /* 页脚两边均不允许有浮动元素，如果有，页脚会下移，直到其左右两边没有浮动元素为止。 */
+    clear: both;
+  }

@@ -1,0 +1,155 @@
+body{
+    /* 设置背景颜色 */
+    background-color: rgb(211, 218, 196);
+     /*页面的初始化：页面上下左右存在空隙，因为页面默认margin=8px，所以将默认的margin去掉即可，即设置body的margin=0px。*/
+    margin: 0px; 
+    /* 设置字体和大小，采用缩写的方式写 */
+    font: small sans-serif;  
+}
+/* 标签选择器 */
+footer {
+    background-color:rgb(181, 162, 131);
+    /* 设置字体颜色 */
+    color:  #efe5d0;
+    /* 设置字体大小为相对body的字体大小的90%，并设置为斜体 */
+    font: 90% italic;
+    /* 调整文字内容的位置，并使其居中 */
+    padding:15px;
+    margin: 0px;
+    text-align:center;
+    /* 页脚两边均不允许有浮动元素，如果有，页脚会下移，直到其左右两边没有浮动元素为止。 */
+    clear: both;
+  }
+header{
+    height: 300px;
+    /* 添加背景图片，且背景图在背景颜色之上 */
+    background-image: url(../images/header.png) ;
+    /* 因为背景图像会自动重复插入，所以需要设置不重复 */
+    background-repeat: no-repeat;
+}
+a{
+    /* 修改超链接的字体颜色为黑色 */
+    color: black;
+    /* 删除超链接的下划线 */
+    text-decoration: none;
+}
+/* 针对导航区中的ul标签进行修改，所以需要加上父元素navS */
+nav ul{
+    /* 去掉列表项前的小圆点 */
+    list-style-type: none;
+    margin: 0;
+    padding-top: 7px;
+}
+nav ul li{
+    /* 修改布局：ul默认是块元素，需将其改成行类元素 */
+    display: inline;
+    padding-left: 120px;
+    text-align: center;
+}
+/* 设置logo的样式，因为只需要使用一次，所以可以用id选择器 */
+#logo{
+    /* 调整logo的大小，使其可以在header里面 */
+    width: 270px;
+    height: 270px;
+    /* 边框圆角，设置图片为圆形 */
+    border-radius: 50%;
+    /* 调整logo的位置——左上方，用百分比调整可以适用其他电脑显示屏 */
+     /* 采用固定定位，使logo可以随页面上下移动而移动。*/
+     position: fixed;
+     top: 1%;
+     left: 4%;
+}
+/* 类选择器，可以多次使用 */
+.inner{
+    /* 在导航栏原有的样式下（导航栏.css），添加inner的宽度 */
+    width: 1000px;
+}
+#container_1{
+    height: 280px;
+    /* container_1的高度为280px，因为cont_1_1的高度为276px，还有4px的border-top */
+    padding-top: 25px;
+}
+/* 子孙选择器，空格表示包含关系,#container_1是.inner的父元素，.inner是#cont_1_1的父元素 */
+#container_1 .inner #cont_1_1{
+    height: 276px;
+    width: 300px;
+    /* background-color: rgb(208, 238, 206); */
+    /* background-color: #fff; */
+    /* 采用浮动布局，将此div浮动到页面的左侧 */
+    float: left;
+}
+#container_1 .inner #cont_1_1 img{
+    height: 270px;
+    /* 因为cont_1_1的高度为276px，而此img的高度为270px，还剩6px，所以设置margin-top为3px */
+    margin-top: 3px;
+    margin-left: 40px;
+}
+#container_1 .inner #cont_1_2{
+    height: 276px;
+    /* 因为导航栏的inner的宽度为1000px，然后cont_1_1的宽度为300px，所以设置cont_1_2的宽度为700px */
+    width: 700px;
+    background-color:  rgb(236, 247, 237);
+    /* 采用浮动布局，将此div浮动到页面的右侧 */
+    float: right;
+    text-align: center;
+    /* 设置行高，行间距提高到1.4倍。行高line-height可以被继承 */
+    line-height: 1.4em;
+}
+#container_2{
+    /* 设置第二个内容块的高度 */
+    height: 493px;
+}
+#container_2 .inner #cont_2_1{
+    /* 设置div盒子的大小 */
+    height: 400px;
+    width: 320px;
+    background-color:  white;
+    /* 采用浮动布局，将此div浮动到页面的左侧 */
+    float: left;
+    margin-top: 30px;
+    overflow: hidden;
+    /* overflow主要用于设置盒子的属性，规定当内容溢出元素框时发生的事情，hidden表示：内容会被修剪，并且其余内容是不可见的。 */
+}
+h3{
+    /* 设置h3标题字体大小为body的140%，并居中 */
+    font-size: 140%;
+    text-align: center;
+    /* 在设置margin时，先设置margin，在设置某一特定的margin-top等 */
+    margin: 0px;
+    margin-top: 10px;
+}
+.content{
+    /* 设置文本内容首行缩进2em */
+    text-indent: 2em;
+    /* 缩写margin时，顺序是：上右下左 */
+    margin: 0px 6px 0px 6px;
+}
+#container_2 .inner #cont_2_2{
+    /* 统一div的大小 */
+    height: 400px;
+    width: 320px;
+    background-color:  white;
+    /* 采用浮动布局，将此div浮动到页面的左侧。由于此div的左边已经有一个div采用浮动布局，浮动至页面左边，所以此div将位于中间，即第一个div的右侧 */
+    float: left;
+    /* 设置margin时按顺序设置（上右下左） */
+    margin-top: 30px;
+    margin-left: 20px;
+}
+div#container_2 div.inner div#cont_2_3{
+    height: 400px;
+    width: 320px;
+    background-color: white;
+    /* 采用浮动布局，将此div浮动到页面的右侧 */
+    float: right;
+    margin-top: 30px;
+}
+div#container_2 div.inner div#cont_2_3 img{
+    /* 设置图片大小 */
+    width: 314px;
+    height: 350px;
+}
+div#container_2 div.inner div#cont_2_3 p{
+    margin-top: 10px;
+    /* 设置居中 */
+    text-align: center;
+}

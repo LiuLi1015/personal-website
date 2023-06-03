@@ -1,0 +1,31 @@
+div#nav{
+    /* 设置导航栏的宽度和背景颜色 */
+    height: 50px;
+    background-color:cadetblue;
+    /* background-color:rgb(107, 164, 142); */
+    /* background-color: #5b8d8d; */
+}
+div.inner{
+    /* 设置导航栏中的元素自动调整margin */
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* 针对导航区中的ul标签进行修改，所以需要加上父元素nav */
+nav ul{
+    list-style-type: none;   /* 去掉列表项前的小圆点 */
+    margin: 0;           
+    padding-top: 1%;        /*这里用1%来调整ul的位置是为了让它能适应不同的屏幕分辨率*/
+    padding-left: 0px;
+}
+nav ul li{
+    display: inline;        /* 修改布局：ul默认是块元素，需将其改成行类元素 */
+    padding-left: 10%;       /*这里用8%也是为了让它能适应不同的屏幕分辨率*/
+    text-align: center;
+    font-size: 120%;
+}
+/* 修改nav中的ul的li的a标签的下划线 */
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}

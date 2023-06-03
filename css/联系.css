@@ -1,0 +1,83 @@
+body{
+    /* 设置背景颜色 */
+    background-color: rgb(211, 218, 196);
+     /*页面的初始化：页面上下左右存在空隙，因为页面默认margin=8px，所以将默认的margin去掉即可，即设置body的margin=0px。*/
+    margin: 0px; 
+    /* 设置字体和大小，采用缩写的方式写 */
+    font: small sans-serif;  
+}
+/* 标签选择器 */
+header{
+    /* 设置header页面的高度 */
+    height: 70px;
+}
+h1{
+   /* 设置标题样式 */
+	font-weight: bold;     /*字体加粗*/
+    font: 140%  sans-serif;
+    text-align: center; 
+}
+form {
+    /*表单采用表格布局*/
+	display: table;    
+    /* 设置表单的大小，并通过设置margin、padding，调整表单位置 */
+    width: 600px;
+    height: 460px;
+    /* 表单内容和边框之间增加内边距 */
+	padding: 10px;
+    padding-left: 50px;
+    /* 调整表单的页边距 */
+    margin: auto;
+    margin-top:2%;
+    /* 设置表单边框样式 */
+	border: thin dotted #3b4857;
+    /* 添加背景色 */
+	background-color: rgb(221, 210,190);
+}
+/* 类选择器 */
+div.tableRow {
+    /* 设置表单中的行采用表格行布局 */
+	display: table-row;
+}
+/* 子孙选择器 */
+div.tableRow label {
+    /* 设置表单中的每一格采用表格单元格布局 */
+	display: table-cell;
+    /* 单元格垂直方向上向上对齐 */
+	vertical-align: top;
+    /* 设置每行的第一个单元格右对齐 */
+	text-align: right;
+    /* 调整表单中每个单元格的位置 */
+	padding: 3px;
+    margin-left: auto;
+}
+/* 多行文本 */
+div.tableRow textarea{
+    /* 设置文本框的div的大小 */
+    width: 400px;
+    height: 200px;
+}
+/* id选择器 */
+div.tableRow #sex{
+    /* 设置左对齐 */
+    text-align: left;
+    width: 50px;
+}
+footer {
+    /* 添加背景颜色 */
+    background-color: rgb(181, 162, 131);
+    /* 设置字体颜色 */
+    color: #efe5d0;
+    /* 设置字体大小为相对body的字体大小的90%，并设置为斜体 */
+    font: 90% italic;
+    /* 设置宽度 */
+    width: 100%;
+    /* 调整文字内容的位置，并使其居中 */
+    padding:15px;
+    margin: 0px;
+    text-align:center;
+    /* 定位布局，采用绝对定位 */
+    position: absolute;
+    /* 将页脚区至于页面最低端 */
+    bottom: 0px;
+  }

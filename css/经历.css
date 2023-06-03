@@ -1,0 +1,104 @@
+body{
+    /* 设置背景颜色 */
+    background-color: rgb(211, 218, 196);
+     /*页面的初始化：页面上下左右存在空隙，因为页面默认margin=8px，所以将默认的margin去掉即可，即设置body的margin=0px。*/
+    margin: 0px; 
+    /* 设置字体和大小，采用缩写的方式写 */
+    font: small sans-serif;  
+}
+/* 标签选择器 */
+header{
+    /* 设置header页面的高度 */
+    height: 70px;
+}
+/* 类选择器，可以使用多次 */
+.timeline-small-body{
+    /* 设置时间轴区域的大小 */
+    width: 1000px;
+    height: auto;
+    /* 调整时间轴的位置，因为header的高度为70px,而header中的nav高度为50px，所以就有20px的距离，在页面中显得略微有点宽，于是调节时间轴的margin-top为负，将其上移至合适位置 */
+    margin-top: -1.5%;
+    margin-left: 20%
+}
+/* 子孙选择器，.timeline-small-body为父元素，ul为子孙 */
+.timeline-small-body ul{
+    /* 设置内边距,1em表示1倍，2em表示2倍 */
+    padding: 1em 0 0 2em;
+    margin: 0;
+    /* 去掉ul列表中每个li标签前的小圆点 */
+    list-style: none;
+    /* 定位布局,采用相对定位 */
+    position: relative;
+}
+/* 伪类befor，在ul的前面插入元素 */
+.timeline-small-body ul::before{
+    /* 所插入的元素的内容为' ' */
+    content: ' ';
+    /* 设置所插入元素的大小 */
+    width: 5px;
+    height: 100%;
+    background-color: rgb(132, 227, 225);
+    /* 定位布局，采用绝对定位，调整top和left即可 */
+    position: absolute;
+    top: 0;
+    left: 2.35em;
+    /* 调整图层位置，使伪类before的元素显示在上面 */
+    z-index: -1;
+}
+.timeline-small-body li div{
+    /* 将li标签中的div盒子设置为inline-block，即将对象呈递为内联对象，但是对象的内容作为块对象呈递。旁边的内联对象会被呈递在同一行内。 */
+    display: inline-block;
+    margin: 1em 0;
+    /* 设置垂直对齐方式为向上对齐 */
+    vertical-align: top;
+}
+/* 子孙选择器，设置时间轴上的点的样式 */
+.timeline-small-body .dot{
+    /* 先设置点的大小，使用em表示相对大小，1倍 */
+    width: 1em;
+    height: 1em;
+    /* 再设置点的形状，设置边框圆角 */
+    border-radius: 50%;
+    /* 然后设置点的背景颜色 */
+    background-color: #dd9cd8;
+    /* 再设置点的图层位置，z-index 属性设定了一个定位元素及其后代元素或 flex 项目的 z-order。当元素之间重叠的时候，z-index 较大的元素会覆盖较小的元素在上层进行显示。 */
+    z-index: 1;
+    /* 调整点的位置 */
+    margin-top: 1.7%;
+    margin-right: 1em;
+}
+.timeline-small-body .date {
+    /* 设置存放时间的div的宽度，并修改字体大小为1.1倍 */
+    width: 13%;
+    font-size: 1.1em;
+}
+/* 设置存放内容的div的宽度 */
+.timeline-small-body .content{
+    width: 80%;
+}
+.timeline-small-body .content h3{
+    /* 设置标题h3所在div的大小，页边距为0，字体大小为1.2倍 */
+   font-size: 1.2em;
+   margin: 0;
+   width: 300px;
+}
+.timeline-small-body .content p{
+    /* 设置段落p的大小，页边距为0，字体大小为1倍，文本内容左对齐 */
+    font-size: 1em;
+    margin: 0;
+    width: 700px;
+    text-align: left;
+}
+footer {
+    background-color:rgb(181, 162, 131);
+    /* 设置字体颜色 */
+    color:  #efe5d0;
+    /* 设置字体大小为相对body的字体大小的90%，并设置为斜体 */
+    font: 90% italic;
+    /* 调整文字内容的位置，并使其居中 */
+    padding:15px;
+    margin: 0px;
+    text-align:center;
+    /* 页脚两边均不允许有浮动元素，如果有，页脚会下移，直到其左右两边没有浮动元素为止。 */
+    clear: both;
+  }

@@ -1,0 +1,90 @@
+body{
+    /* 设置背景颜色 */
+    background-color: rgb(211, 218, 196);
+     /*页面的初始化：页面上下左右存在空隙，因为页面默认margin=8px，所以将默认的margin去掉即可，即设置body的margin=0px。*/
+    margin: 0px; 
+    /* 设置字体和大小，采用缩写的方式写 */
+    font: small sans-serif;  
+}
+/* 标签选择器 */
+header{
+    /* 设置header页面的高度 */
+    height: 70px;
+}
+img{
+    /* 调整图片的大小 */
+    width: 300px;
+    height: 300px;
+}
+h3{
+    /* 调整标题的位置，使其位于图片的正下方 */
+    margin: 0;
+    margin-left: -2em;
+    text-align: center;
+    /* 设置字体大小为body的140% */
+    font-size: 140%;
+}
+ul{
+    /* 设置ul列表的左内边距为20px */
+    padding-left: 20px;
+}
+/* id选择器 */
+div#container{
+    /* 设置大div盒模型的大小 */
+    width: 1200px;
+    height: auto;
+    /* 调整该div的位置，至于页面中间 */
+    margin-left: 12%;
+}
+/* 子孙选择器 ,#container为父元素, .con1为子孙 */
+div#container div.con1{
+    /* 设置盒子的大小 */
+    height: 375px;
+    width: 350px;
+    /* 浮动布局,使其浮动至页面左边 */
+    float: left;
+    /* 设置上下页边距为10px，拉开与导航栏和相邻div的距离 */
+    margin: 10px 0px 10px 0px;
+    /* 当内容超出盒子时，超出部分的内容隐藏不显示 */
+    overflow: hidden;
+}
+div#container div.con2{
+    /* 设置盒子的大小，与前面的盒子保持大小一致 */
+    height: 375px;
+    width: 350px;
+    /* 浮动布局,使其浮动至页面左边 */
+    float: left;
+    /* 设置页边距，拉开与导航栏和相邻div的距离。缩写，按顺序：上右下左 */
+    margin: 10px 0px 10px 60px;
+}
+div#container div.con3{
+    /* 设置盒子的大小，与前面的盒子保持大小一致 */
+    height: 375px;
+    width: 350px;
+    /* 浮动布局,使其浮动至页面右边 */
+    float: right;
+    /* 设置页边距，拉开与导航栏和相邻div的距离。按顺序：上右下左 */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* 标签选择器 */
+video{
+    /* 设置视频的大小，必须小于所在的div */
+    width: 320px;
+    height: 250px;
+    /* 向上对齐 */
+    text-align: top;
+}
+footer {
+    background-color:rgb(181, 162, 131);
+    /* 设置字体颜色 */
+    color:  #efe5d0;
+    /* 设置字体大小为相对body的字体大小的90%，并设置为斜体 */
+    font: 90% italic;
+    /* 调整文字内容的位置，并使其居中 */
+    padding:15px;
+    margin: 0px;
+    text-align:center;
+    /* 页脚两边均不允许有浮动元素，如果有，页脚会下移，直到其左右两边没有浮动元素为止。 */
+    clear: both;
+  }

@@ -1,0 +1,50 @@
+body{
+    /*页面初始化*/
+    margin: 0px;         
+    /* 设置字体和背景（与其他页面统一）    */
+    font: small sans-serif;  
+    color: black;
+    background-color: rgb(211, 218, 196);
+}
+/* 标签选择器 */
+header{
+    /* 设置header页面的高度 */
+    height: 70px;
+}
+table{
+    /*设置表格的边框样式*/
+    border: solid black;  
+    /* 设置表格的宽度   */
+    width: 900px;
+    /* 通过margin调整表格位置居中 */
+    margin-left: 20%;
+    margin-bottom: 20px;
+}
+caption{
+    /* 设置标题字体为body的140%，并加粗 */
+    font-size: 140%;
+    font-weight: bold;
+}
+td{
+    /*单元格内容居中*/
+    text-align: center;               
+}
+/* 合并规则，中间用“,”，#honor和#study都采用此样式 */
+/* id选择器，仅使用一次 */
+#honor , #study{
+    /* 使文本内容左对齐 */
+    text-align: left;
+}
+footer {
+    background-color:rgb(181, 162, 131);
+    /* 设置字体颜色 */
+    color:  #efe5d0;
+    /* 设置字体大小为相对body的字体大小的90%，并设置为斜体 */
+    font: 90% italic;
+    /* 调整文字内容的位置，并使其居中 */
+    padding:15px;
+    margin: 0px;
+    text-align:center;
+    /* 页脚两边均不允许有浮动元素，如果有，页脚会下移，直到其左右两边没有浮动元素为止。 */
+    clear: both;
+  }
